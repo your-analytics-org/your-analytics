@@ -12,13 +12,13 @@
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.6"
   },
   "dependencies": {
-    "@your-analytics/clickhouse": "file:../../packages/clickhouse",
     "@maxmind/geoip2-node": "^1.4.0",
+    "@your-analytics/clickhouse": "file:../../packages/clickhouse",
     "express": "^4.17.1",
-    "ua-parser-js": "^0.7.21",
+    "ua-parser-js": "^0.7.23",
     "url-parse": "^1.4.7"
   }
 }
