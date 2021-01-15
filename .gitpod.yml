@@ -24,6 +24,10 @@ ports:
   - port: 10000
     onOpen: ignore
 
+github:
+  prebuilds:
+    addBadge: true
+
 vscode:
   extensions:
     - svelte.svelte-vscode@101.11.0:IeLZ6cWKXa9lffjVILRhEA==
