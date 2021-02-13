@@ -15,6 +15,8 @@
 </script>
 
 <script lang="ts">
+  import { useMachine } from "../states/use-machine";
+  import onboardingMachine from "../states/onboarding/machine";
   import onboarding from "../stores/onboarding";
   import Header from "../components/header/index.svelte";
   import MainContent from "../components/main-content.svelte";
@@ -28,6 +30,11 @@
     sites?: {};
   };
 
+  const services = {};
+  const machine = onboardingMachine(services);
+  const { state, send } = useMachine(machine);
+  $: console.log($state.value)
+
   $onboarding.user = user;
   const stepsCount = user.firstName ? 2 : 3;
 </script>
@@ -36,8 +43,12 @@
   <title>Onboarding | Your Analytics</title>
 </svelte:head>
 
+<button on:click={() => send("SAVE", {
+  to: 'step1-service'})}>SAVE</button>
+
 <Header />
 <MainContent>
+  {$state.value}
   <div>
     <ul class="space-y-4 md:flex md:space-y-0 md:space-x-8">
       {#if stepsCount === 3}
