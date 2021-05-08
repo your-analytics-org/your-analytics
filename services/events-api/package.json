@@ -18,7 +18,7 @@
     "@your-analytics/clickhouse": "file:../../packages/clickhouse",
     "@maxmind/geoip2-node": "^1.4.0",
     "express": "^4.17.1",
-    "ua-parser-js": "^0.7.21",
+    "ua-parser-js": "^0.7.24",
     "url-parse": "^1.4.7"
   }
 }
