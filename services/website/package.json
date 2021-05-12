@@ -15,7 +15,7 @@
     "validate": "svelte-check --ignore src/node_modules/@sapper,**/tailwindcss.svelte,**/world-map.svelte"
   },
   "dependencies": {
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "chartjs-chart-geo": "^2.1.0",
     "compression": "^1.7.1",
     "cookie-parser": "^1.4.5",
